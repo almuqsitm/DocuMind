@@ -60,6 +60,8 @@ async def upload_document(file: UploadFile = File(...)):
         doc_count = rag_service.ingest_document(temp_path)
         return {"filename": file.filename, "chunks_added": doc_count, "message": "Document ingested successfully."}
     except Exception as e:
+        import traceback
+        traceback.print_exc()
         raise HTTPException(status_code=500, detail=str(e))
     finally:
         if os.path.exists(temp_path):
@@ -79,6 +81,8 @@ async def chat(request: ChatRequest):
         answer, sources = rag_service.query(request.query)
         return ChatResponse(response=answer, sources=sources)
     except Exception as e:
+        import traceback
+        traceback.print_exc()
         raise HTTPException(status_code=500, detail=str(e))
 
 if __name__ == "__main__":
