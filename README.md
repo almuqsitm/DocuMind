@@ -1,10 +1,23 @@
 # DocuMind: AI Document Intelligence Engine
 
-DocuMind is a Retrieval Augmented Generation (RAG) system designed to analyze complex financial and legal documents. It allows users to upload PDF files (such as tax codes, contracts, or financial statements) and query them using natural language to receive precise, cited answers.
+![DocuMind Architecture](./public/banner.png)
+
+DocuMind is a **Retrieval Augmented Generation (RAG)** system designed to analyze highly complex financial and legal documents. It allows users to upload PDF files (such as tax codes, contracts, or financial statements) and query them using natural language to receive precise, cited answers.
 
 This project demonstrates the core architecture used in modern AI legal-tech, including vector search, embedding pipelines, and semantic retrieval.
 
-## Technical Architecture
+## 🛠 Tech Stack
+
+![FastAPI](https://img.shields.io/badge/FastAPI-005571?style=for-the-badge&logo=fastapi)
+![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
+![LangChain](https://img.shields.io/badge/LangChain-1C3C3C?style=for-the-badge&logo=langchain&logoColor=white)
+![OpenAI](https://img.shields.io/badge/OpenAI-412991?style=for-the-badge&logo=openai&logoColor=white)
+![ChromaDB](https://img.shields.io/badge/ChromaDB-fc521f?style=for-the-badge&logo=chromadb&logoColor=white)
+![Next JS](https://img.shields.io/badge/Next-black?style=for-the-badge&logo=next.js&logoColor=white)
+![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white)
+![TailwindCSS](https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white)
+
+## 🏗 Architecture
 
 ### Backend (Server)
 *   **Framework**: FastAPI (Python)
@@ -19,14 +32,7 @@ This project demonstrates the core architecture used in modern AI legal-tech, in
 *   **Styling**: Tailwind CSS
 *   **State**: React Hooks for real-time chat and file management
 
-## Features
-
-1.  **Semantic Search**: Uses vector embeddings to understand the "meaning" of a query rather than simple keyword matching.
-2.  **Context-Aware Answers**: Retrieves relevant chunks from the document and uses GPT-4 to synthesize an answer.
-3.  **Source Citations**: Every answer includes references to the specific file and page number used.
-4.  **Secure Processing**: Documents are processed locally and stored in a private vector store instance.
-
-## Installation & Setup
+## 🚀 Installation & Setup
 
 ### Prerequisites
 *   Node.js 18+
@@ -65,7 +71,7 @@ npm run dev
 
 Open `http://localhost:3000` in your browser.
 
-## Usage
+## 💡 Usage
 
 1.  Upload a PDF document via the drag-and-drop interface.
 2.  Wait for the "Document ingested successfully" confirmation.
